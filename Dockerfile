@@ -1,4 +1,4 @@
-FROM redis:6-alpine
+FROM redis:6.2.6-alpine
 RUN mkdir '/var/lib/redis'
 COPY redis.conf .
 
