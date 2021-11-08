@@ -3,7 +3,7 @@ services:
   name: stadtpuls-redis
   env: docker
   region: frankfurt
-  disk:
-    name: data
-    mountPath: /var/lib/redis
-    sizeGB: 1
+  # disk:
+  #   name: data
+  #   mountPath: /var/lib/redis
+  #   sizeGB: 1
