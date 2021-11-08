@@ -1,6 +1,6 @@
 services:
 - type: pserv
-  name: redis
+  name: stadtpuls-redis
   env: docker
   disk:
     name: data
