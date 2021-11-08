@@ -2,6 +2,7 @@ services:
 - type: pserv
   name: stadtpuls-redis
   env: docker
+  region: frankfurt
   disk:
     name: data
     mountPath: /var/lib/redis
