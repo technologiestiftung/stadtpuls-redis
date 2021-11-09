@@ -1,8 +1,9 @@
 services:
 - type: pserv
-  name: redis
+  name: stadtpuls-redis
   env: docker
-  disk:
-    name: data
-    mountPath: /var/lib/redis
-    sizeGB: 1
+  region: frankfurt
+  # disk:
+  #   name: data
+  #   mountPath: /var/lib/redis
+  #   sizeGB: 1
