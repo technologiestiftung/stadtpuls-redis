@@ -1,4 +1,21 @@
-# Redis on Render
+# Stadtpuls.com redis
+
+The [stadtpuls.com API](https://github.com/technologiestiftung/stadtpuls-api) uses Redis as in memory database for the fastify rate limiter.
+
+## Development
+
+In development you need to start the redis server with docker in a new shell session:
+
+```bash
+# MacOS
+docker compose up
+# Linux
+sudo docker-compose up
+# Windows
+# ???
+```
+
+## Redis on Render
 
 This is an example repo with a Dockerfile for running a Redis cache with persistence as a **private service** on Render.
 
@@ -18,11 +35,10 @@ Use the button below to deploy a persistent Redis instance on Render.
 
 1. Select **New Private Service** on your Render dashboard and use your fork of this repo to create the service.
 
-2. Make sure the `Environment` is set to `Docker`, and enter a name for the service (this will be used to generate the private URL). 
+2. Make sure the `Environment` is set to `Docker`, and enter a name for the service (this will be used to generate the private URL).
 
-3. Add a new disk in the `Advanced` section. Give it a name and set the mount path to `/var/lib/redis`. You can also change the default size for your disk: `1 GB` should be enough for small projects.
+3. (optional) Add a new disk in the `Advanced` section. Give it a name and set the mount path to `/var/lib/redis`. You can also change the default size for your disk: `1 GB` should be enough for small projects.
 
 Click `Save` and you're good to go! Once deployed, your Redis instance will be available on a URL similar to `redis:10000`, and you can start using your Redis URL from other services in your Render account. Be sure to prepend `redis://` to the URL displayed in your dashboard.
 
 If you need help, you can always chat with us at https://render.com/chat.
-
